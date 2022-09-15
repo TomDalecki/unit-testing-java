@@ -7,6 +7,8 @@
     <groupId>pl.tomdal</groupId>
     <artifactId>unit-testing-java</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!--żeby odpalać testy z poziomu Maven trzeba dożucic dwa plugin-->
+    <!-- pierwszy odpowiadaza za to w jakiej wersji Java trzymamy źródła i jaką wersję mam mieć docelowy kod skopiowanych źródeł    -->
 
     <build>
         <plugins>
@@ -14,16 +16,17 @@
 
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
-
+                    <source>18</source>
+                    <target>18</target>
                 </configuration>
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12.4</version>
+                <version>3.0.0-M1</version>
             </plugin>
         </plugins>
     </build>
@@ -32,8 +35,9 @@
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.0.0</junit.version>
+        <junit.version>5.9.0</junit.version>
     </properties>
+
 
     <dependencies>
     <dependency>
@@ -47,7 +51,7 @@
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
         <scope>test</scope>
-        <version>${junit.version}</version>
+        <version>5.0.0</version>
     </dependency>
 
     <dependency>
@@ -56,7 +60,13 @@
         <scope>test</scope>
         <version>1.0.0</version>
     </dependency>
-    </dependencies>
 
+<!--        <dependency>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-compiler-plugin</artifactId>-->
+<!--            <version>3.10.1</version>-->
+<!--            <type>maven-plugin</type>-->
+<!--        </dependency>-->
+    </dependencies>
 
 </project>
