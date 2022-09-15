@@ -8,23 +8,21 @@
     <artifactId>unit-testing-java</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!--żeby odpalać testy z poziomu Maven trzeba dożucic dwa plugin-->
-    <!-- pierwszy odpowiadaza za to w jakiej wersji Java trzymamy źródła i jaką wersję mam mieć docelowy kod skopiowanych źródeł    -->
+
 
     <build>
         <plugins>
             <plugin>
-
+    <!-- pierwszy odpowiada za to w jakiej wersji Java trzymamy źródła i jaką wersję mam mieć docelowy kod skopiowanych źródeł    -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
                 <configuration>
                     <source>18</source>
                     <target>18</target>
                 </configuration>
             </plugin>
-
+    <!-- drugi odpowiada za odpalanie testów, bez tego maven nie wie jaka biblioteka jest używana     -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
             </plugin>
@@ -51,14 +49,14 @@
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
         <scope>test</scope>
-        <version>5.0.0</version>
+        <version>5.9.0</version>
     </dependency>
 
     <dependency>
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-launcher</artifactId>
         <scope>test</scope>
-        <version>1.0.0</version>
+        <version>1.9.0</version>
     </dependency>
 
 <!--        <dependency>-->
