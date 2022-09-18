@@ -10,24 +10,24 @@
     <!--żeby odpalać testy z poziomu Maven trzeba dożucic dwa plugin-->
 
 
-    <build>
-        <plugins>
-            <plugin>
-    <!-- pierwszy odpowiada za to w jakiej wersji Java trzymamy źródła i jaką wersję mam mieć docelowy kod skopiowanych źródeł    -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>18</source>
-                    <target>18</target>
-                </configuration>
-            </plugin>
-    <!-- drugi odpowiada za odpalanie testów, bez tego maven nie wie jaka biblioteka jest używana     -->
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M1</version>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; pierwszy odpowiada za to w jakiej wersji Java trzymamy źródła i jaką wersję mam mieć docelowy kod skopiowanych źródeł    &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>maven-compiler-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <source>18</source>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <target>18</target>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+<!--    &lt;!&ndash; drugi odpowiada za odpalanie testów, bez tego maven nie wie jaka biblioteka jest używana     &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.0.0-M1</version>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
@@ -38,12 +38,12 @@
 
 
     <dependencies>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <scope>test</scope>
-        <version>${junit.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--        <groupId>org.junit.jupiter</groupId>-->
+<!--        <artifactId>junit-jupiter-engine</artifactId>-->
+<!--        <scope>test</scope>-->
+<!--        <version>${junit.version}</version>-->
+<!--    </dependency>-->
 
     <dependency>
         <groupId>org.junit.jupiter</groupId>
@@ -52,19 +52,13 @@
         <version>5.9.0</version>
     </dependency>
 
-    <dependency>
-        <groupId>org.junit.platform</groupId>
-        <artifactId>junit-platform-launcher</artifactId>
-        <scope>test</scope>
-        <version>1.9.0</version>
-    </dependency>
+<!--    <dependency>-->
+<!--        <groupId>org.junit.platform</groupId>-->
+<!--        <artifactId>junit-platform-launcher</artifactId>-->
+<!--        <scope>test</scope>-->
+<!--        <version>1.9.0</version>-->
+<!--    </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.maven.plugins</groupId>-->
-<!--            <artifactId>maven-compiler-plugin</artifactId>-->
-<!--            <version>3.10.1</version>-->
-<!--            <type>maven-plugin</type>-->
-<!--        </dependency>-->
     </dependencies>
 
 </project>
