@@ -6,13 +6,13 @@ public class Meal {
     int price;
     private String name;
 
+    public Meal(int price) {
+        this.price = price;
+    }
+
     public Meal(int price, String name) {
         this.price = price;
         this.name = name;
-    }
-
-    public Meal(int price) {
-        this.price = price;
     }
 
     public int getDiscountPrice (int discount){
@@ -22,7 +22,6 @@ public class Meal {
     public int getPrice() {
         return price;
     }
-
 
     @Override
     public boolean equals(Object o) {

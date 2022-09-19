@@ -1,7 +1,7 @@
 package testing;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 // BDD określa sposób nazywania testów
 // testy nazywamy dokładnie według funkcjonalności którą dany test ma sprawdzać
@@ -28,4 +28,27 @@ public class AccountTest2 {
         assertTrue(newAccount.isActive());
     }
 
+    @Test
+    void newlyCreatedAccountShouldNotHaveDefaultDeliveryAddress(){
+        //given
+        Account account = new Account();
+        //when
+        Address address = account.getDefoultDeliveryAdress();
+
+        //then
+        assertNull(address);
+    }
+
+    @Test
+    void defaultDeliveryAddressShouldNotBeNullAfterBeingSet(){
+        //given
+        Account account = new Account();
+        Address address = new Address("Sezmkowa", "45");
+        account.setDefoultDeliveryAdress(address);
+        //when
+        Address defaultAddress = account.getDefoultDeliveryAdress();
+        //then
+        assertNotNull(defaultAddress);
+
+    }
 }
